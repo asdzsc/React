@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 // 类组件
 // export default class Child extends Component {
@@ -16,7 +16,12 @@ import React, { Component } from "react";
 
 // 函数式组件/无状态组件
 const Child = (props) => {
-  return <div>child {props.title}</div>;
+  return (
+    <>
+      <div>child {props.title}</div>
+      {props.children}
+    </>
+  );
 };
 // props默认值
 Child.defaultProps = {

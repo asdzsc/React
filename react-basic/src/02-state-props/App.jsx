@@ -6,7 +6,9 @@ class App extends Component {
     return (
       <>
         <h1>app</h1>
-        <Child title="parents"></Child>
+        <Child title="parents">
+          <div>children</div>
+        </Child>
       </>
     );
   }

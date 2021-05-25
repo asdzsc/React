@@ -4,7 +4,8 @@ import ReactDom from "react-dom";
 // import App from "./app";
 
 // import App from "./01-get-start/classStyle";
-import App from "./02-state-props/App";
+// import App from "./02-state-props/App";
+import App from "./02-state-props/PropTypes";
 
 
 // 函数组件
