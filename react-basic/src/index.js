@@ -3,7 +3,9 @@ import ReactDom from "react-dom";
 
 // import App from "./app";
 
-import App from "./01-get-start/next";
+// import App from "./01-get-start/classStyle";
+import App from "./02-state-props/App";
+
 
 // 函数组件
 // const App = (props) => {
@@ -20,7 +22,7 @@ import App from "./01-get-start/next";
 // }
 
 // React 元素 camel-case, React 组件 pascal-case
-ReactDom.render(
-  <App />, //类的实例化 //React 组件
-  document.querySelector("#root")
+ReactDom.render( <
+    App / > , //类的实例化 //React 组件
+    document.querySelector("#root")
 );
