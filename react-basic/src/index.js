@@ -5,7 +5,14 @@ import ReactDom from "react-dom";
 
 // import App from "./01-get-start/classStyle";
 // import App from "./02-state-props/App";
-import App from "./02-state-props/PropTypes";
+// import App from "./02-state-props/PropTypes";
+// import App from "./03-状态提升(共享状态)/Parent";
+// import App from "./04-受控组件和非受控组件/App";
+// import App from "./05-数据渲染/App";
+// import App from "./06-event/App";
+// import App from './07-form/App'
+// import App from './07-form/Selects'
+import App from './07-form/Multipick'
 
 
 // 函数组件
