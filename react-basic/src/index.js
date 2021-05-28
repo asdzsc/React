@@ -12,8 +12,10 @@ import ReactDom from "react-dom";
 // import App from "./06-event/App";
 // import App from './07-form/App'
 // import App from './07-form/Selects'
-import App from './07-form/Multipick'
-
+// import App from './07-form/Multipick'
+// import App from './07-form/NameForm'
+// import App from './07-form/File'
+import App from "./08-todoList/App";
 
 // 函数组件
 // const App = (props) => {
@@ -30,7 +32,7 @@ import App from './07-form/Multipick'
 // }
 
 // React 元素 camel-case, React 组件 pascal-case
-ReactDom.render( <
-    App / > , //类的实例化 //React 组件
-    document.querySelector("#root")
+ReactDom.render(
+  <App />, //类的实例化 //React 组件
+  document.querySelector("#root")
 );
