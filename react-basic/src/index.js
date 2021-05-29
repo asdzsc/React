@@ -15,7 +15,8 @@ import ReactDom from "react-dom";
 // import App from './07-form/Multipick'
 // import App from './07-form/NameForm'
 // import App from './07-form/File'
-import App from "./08-todoList/App";
+// import App from "./08-todoList/App";
+import App from "./09-生命周期函数/App";
 
 // 函数组件
 // const App = (props) => {
@@ -36,3 +37,7 @@ ReactDom.render(
   <App />, //类的实例化 //React 组件
   document.querySelector("#root")
 );
+
+// setTimeout(() => {
+//   ReactDom.unmountComponentAtNode(document.querySelector("#root"));
+// }, 5000);
