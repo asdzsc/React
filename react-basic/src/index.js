@@ -18,7 +18,8 @@ import ReactDom from "react-dom";
 // import App from "./08-todoList/App";
 // import App from "./09-生命周期函数/App";
 // import App from "./10-context/App";
-import App from "./10-context/counter/App";
+// import App from "./10-context/counter/App";
+import App from "./11-HOC(高阶组件)/App";
 
 // 函数组件
 // const App = (props) => {
@@ -35,9 +36,9 @@ import App from "./10-context/counter/App";
 // }
 
 // React 元素 camel-case, React 组件 pascal-case
-ReactDom.render( <
-    App / > , //类的实例化 //React 组件
-    document.querySelector("#root")
+ReactDom.render(
+  <App msg="word" />, //类的实例化 //React 组件
+  document.querySelector("#root")
 );
 
 // setTimeout(() => {
