@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { CountConsumer } from "./Count";
 // Consumer 嵌套
-import { Consumer as ShowConsumer } from "./ShowContext";
+import { Consumer as ShowConsumer } from "./showContext";
 export class ChildHood extends Component {
   render() {
     return (
