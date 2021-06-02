@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
-
+import { Provider } from "react-redux";
+// import store from './13-redux/02-Redux/React+redux/store'
 // import App from "./app";
 
 // import App from "./01-get-start/classStyle";
@@ -21,7 +22,9 @@ import ReactDom from "react-dom";
 // import App from "./10-context/counter/App";
 // import App from "./11-HOC(高阶组件)/App";
 // import App from "./12-Portal/App";
-import App from "./13-redux/01-self-redux/App.jsx";
+// import App from "./13-redux/01-self-redux/App.jsx";
+// import App from "./13-redux/02-Redux/React+redux/App";
+import App from "./13-redux/03-TodoList/TodoList";
 
 // 函数组件
 // const App = (props) => {
@@ -37,11 +40,20 @@ import App from "./13-redux/01-self-redux/App.jsx";
 //   }
 // }
 
+import store from "./13-redux/03-TodoList/store/";
+
 // React 元素 camel-case, React 组件 pascal-case
-ReactDom.render( <
-    App msg = "word" / > , //类的实例化 //React 组件
-    document.querySelector("#root")
+// function render() {
+ReactDom.render(
+  <Provider store={store}>
+    <App />
+  </Provider>, // 类的实例化 //React 组件
+  document.querySelector("#root")
 );
+
+// }
+// render()
+// store.subscribe(render)
 
 // setTimeout(() => {
 //   ReactDom.unmountComponentAtNode(document.querySelector("#root"));

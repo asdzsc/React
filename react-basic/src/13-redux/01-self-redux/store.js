@@ -1,6 +1,6 @@
 import {
-    changeState
-} from './changeState'
+    reducer
+} from './reducer'
 
 let state = {
     count: 0
@@ -15,7 +15,7 @@ const createStore = () => {
     const subscribe = (listener) => listeners.push(listener)
 
     const dispatch = (action) => {
-        state = changeState(state, action)
+        state = reducer(state, action)
         console.log(state);
         // 发布 publish
         listeners.forEach(listener => listener())

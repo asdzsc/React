@@ -2,7 +2,7 @@
 // 1.相同的入参 得到相同的输出
 // 2.不能修改入参
 // 
-const changeState = (state, acticon) => {
+const reducer = (state, acticon) => {
     acticon = acticon || {
         type: ''
     }
@@ -23,5 +23,5 @@ const changeState = (state, acticon) => {
 }
 
 export {
-    changeState,
+    reducer,
 }
