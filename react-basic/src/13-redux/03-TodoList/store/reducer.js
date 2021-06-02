@@ -3,9 +3,10 @@ const defaultState = {
 }
 
 const reducer = (state = defaultState, action) => {
+    console.log(action);
     switch (action.type) {
         case 'SET_DATA':
-            console.log(action.data);
+            // console.log(action.data);
             return {
                 ...state,
                 list: action.data
@@ -14,7 +15,9 @@ const reducer = (state = defaultState, action) => {
             return {
                 list: [
                     ...state.list,
-                    action.task
+                    {
+                        name: action.task
+                    }
                 ]
             }
         case 'REMOVE_DATA':
