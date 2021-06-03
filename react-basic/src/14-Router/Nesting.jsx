@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 
 const Home = () => {
   return <div>Home</div>;
@@ -45,8 +45,12 @@ class Nesting extends Component {
           <Link to="/child/rendering">child</Link>
           <li></li>
         </ul>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/child" component={Child}></Route>
+        {/* 默认是包容性路由 */}
+        <Switch>
+          {/* Switch 排他性路由 */}
+          <Route path="/child" component={Child}></Route>
+          <Route path="/" component={Home}></Route>
+        </Switch>
       </div>
     );
   }
