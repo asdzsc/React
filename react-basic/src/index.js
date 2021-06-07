@@ -41,7 +41,8 @@ import {
 // import App from "./14-Router/Page404";
 // import App from "./14-Router/Sidebar";
 // import App from "./14-Router/RouteConfig";
-import App from "./14-Router/RecursivePaths.jsx";
+// import App from "./14-Router/RecursivePaths.jsx";
+import App from "./15-immutable/App";
 
 // 函数组件
 // const App = (props) => {
