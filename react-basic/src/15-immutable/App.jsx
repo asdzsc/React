@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Map, List, Seq, fromJS } from "immutable";
+// import { Map, List, Seq, fromJS, update, is, Range } from "immutable";
 
 class App extends Component {
   render() {
@@ -125,16 +125,139 @@ class App extends Component {
     // let js = fromJS(obj);
     //   console.log(js);
 
-    let obj = {
-      a: Map({
-        a: 10,
-        b: 20,
-      }),
-      b: List(["a", "b", "c"]),
-    };
+    // let obj = {
+    //   a: Map({
+    //     a: 10,
+    //     b: 20,
+    //   }),
+    //   b: List(["a", "b", "c"]),
+    // };
 
     //js对象可以和immutable对象混用 只有immutable对象包裹的才会数据共享
-    console.log(obj);
+    // console.log(obj);
+
+    // const obj = Map({ a: 1, b: 2, c: List(["a", "b"]) });
+    // console.log(obj.toObject());
+    // console.log(obj.toArray());
+    // console.log(obj.toJS());
+
+    // Map对象无法展开
+    // let map1 = Map({ a: 1, b: 2, c: 3 });
+    // console.log(map1);
+    // const map2 = {
+    //   ...map1,
+    //   d: 4,
+    // };
+    // const map2 = Map({
+    //   ...map1,
+    //   d: 4,
+    // });
+    // console.log(map2.toJS());
+
+    // List 可以展开
+    // let list = List(["a", "b", "c"]);
+    // const list1 = ["aa", ...list, "cc"];
+    // console.log(list1);
+
+    // let map1 = Map({
+    //   a: 0,
+    //   b: List(["a", Map({ f: 10 })]),
+    //   c: Map({
+    //     z: 10,
+    //   }),
+    // });
+    // getIn 获取更深的值
+    // let result = map1.get("b").get(1).get("f");
+    // let result = map1.getIn(["b", 1, "f"]);
+
+    //setIn 设置更深值 返回新的数据 原有的值不变
+    // let result = map1.setIn(["b", 1, "f"], 20);
+
+    // update 根据原值返回新值
+    // let result = map1.update("a", (v) => {
+    //   return v + 100;
+    // });
+
+    // update 根据更深数据的值返回新值
+    // let result = map1.updateIn(["b", 1, "f"], (v) => {
+    // return v + 100;
+    // });
+    // console.log(map1.toJS());
+    // console.log(result.toJS());
+
+    // const obj1 = Map({ a: 1, b: 2, c: 3 });
+    // const obj2 = Map({ a: 1, b: 2, c: 3 });
+
+    // console.log(obj1 === obj2); false
+    // console.log(obj1.equals(obj2)); true
+    // console.log(is(obj1, obj2)); true
+
+    // Set 是去重后的数组
+    // const map1 = Map({ a: 1, b: 2, c: 3 });
+    // const map2 = Map({ a: 1, b: 2, c: 4 });
+
+    // const set = new Set().add(map1);
+    // const set = new Set().add(map2);
+    // console.log(set.has(map2));
+
+    // const list = List(["a", "b", "c"]);
+
+    // updateIn 需要返回值
+    // let result = list.updateIn([2], (v) => {
+    //   return v + 1;
+    // });
+    // let result = list.withMutations((v) => {
+    //   console.log(v.toJS());
+    // });
+    // let list2 = list.setIn([2], "ccc");
+    // console.log(result.toJS());
+    // console.log(list2.toJS());
+
+    // const list = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    // let result = list
+    //   .filter((v) => {
+    //     // console.log(v);
+    //     return v % 2 === 0;
+    //   })
+    //   .map((v) => {
+    //     // console.log(v);
+    //     return v * v;
+    //   });
+
+    // let result1 = Seq(list)
+    //   .filter((v) => {
+    //     console.log(v);
+    //     return v % 2 === 0;
+    //   })
+    //   .map((v) => {
+    //     console.log(v);
+    //     return v * v;
+    //   });
+
+    // console.log(result);
+    // 可以通过Seq的惰性来 计算输出值
+    // console.log(result1.get(1));
+
+    // Seq 只管每一步的操作
+    // const map = Map({ a: 1, b: 2, c: 3 });
+    // const lazySeq = Seq(map);
+    // const newMap = lazySeq
+    //   .flip()
+    //   .map(key => key.toUpperCase())
+    //   .flip();
+
+    // console.log(newMap.toObject())
+
+    // const { Range } = require('immutable');
+
+    // const aRange = Range(1, Infinity)
+    //   .skip(1000)
+    //   .map(n => -n)
+    //   .filter(n => n % 2 === 0)
+    //   .take(1000)
+    //   // -1001,-1002,-1003,-1004,...
+    //   .reduce((r, n) => r * n, 1)
     return <div>immutable</div>;
   }
 }
