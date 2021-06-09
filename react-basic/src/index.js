@@ -46,7 +46,10 @@ import {
 // import App from "./16-lazy-suspence/02/App";
 // import App from "./17-hooks/UseState";
 // import App from "./17-hooks/UseEffect";
-import App from "./17-hooks/UseContext";
+// import App from "./17-hooks/UseContext";
+// import App from "./17-hooks/UseReducer";
+// import App from "./17-hooks/UseCallback";
+import App from "./17-hooks/UseMemo";
 
 // 函数组件
 // const App = (props) => {
