@@ -43,7 +43,10 @@ import {
 // import App from "./14-Router/RouteConfig";
 // import App from "./14-Router/RecursivePaths.jsx";
 // import App from "./15-immutable/App";
-import App from "./16-lazy-suspence/02/App";
+// import App from "./16-lazy-suspence/02/App";
+// import App from "./17-hooks/UseState";
+// import App from "./17-hooks/UseEffect";
+import App from "./17-hooks/UseContext";
 
 // 函数组件
 // const App = (props) => {
@@ -85,5 +88,5 @@ ReactDom.render( <
 // store.subscribe(render)
 
 // setTimeout(() => {
-//   ReactDom.unmountComponentAtNode(document.querySelector("#root"));
+//     ReactDom.unmountComponentAtNode(document.querySelector("#root"));
 // }, 5000);
