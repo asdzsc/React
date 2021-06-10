@@ -4,7 +4,7 @@ import {
 } from 'react'
 
 const useDataList = (id) => {
-
+    // useState 实现响应式
     let [list, setList] = useState([])
 
     useEffect(() => {
