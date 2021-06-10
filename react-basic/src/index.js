@@ -49,7 +49,9 @@ import {
 // import App from "./17-hooks/UseContext";
 // import App from "./17-hooks/UseReducer";
 // import App from "./17-hooks/UseCallback";
-import App from "./17-hooks/UseMemo";
+// import App from "./17-hooks/UseMemo";
+// import App from "./17-hooks/Memoization";
+import App from "./17-hooks/UseRef";
 
 // 函数组件
 // const App = (props) => {
