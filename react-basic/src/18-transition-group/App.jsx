@@ -63,7 +63,9 @@ export default function App() {
         // classNames="my-node"
         in={state}
         timeout={1000}
+        // 加载组件
         mountOnEnter
+        // 移除组件
         unmountOnExit
       >
         <div>hello</div>
